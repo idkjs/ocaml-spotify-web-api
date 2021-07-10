@@ -1,9 +1,11 @@
 (executable
-  (name test_main)
-  (libraries oUnit spotify_web_api))
+ (modes byte exe)
+ (name test_main)
+ (libraries oUnit spotify_web_api))
 
-(alias
-  (name   runtest)
-  (action
-    (chdir %{workspace_root}/test/
-    (run ./test_main.exe))))
+(rule
+ (alias runtest)
+ (action
+  (chdir
+   %{workspace_root}/test/
+   (run ./test_main.exe))))

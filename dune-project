@@ -1,1 +1,3 @@
-(lang dune 1.6)
+(lang dune 2.0)
+
+(formatting disabled)
